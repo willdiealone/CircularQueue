@@ -73,7 +73,7 @@ func (q *CircularQueue) Full() bool {
 	// Если у нас Front указывает на место куда бы мы
 	// хотели положить новый элемент, то вернем true
 	// [F][X][X][X][X][X][X][X][X][R]
-	// 0                           9
+	//  0                          9
 	// 0 == (9+1)%10 → 0 == 0 → true
 	if q.front == (q.rear+1)%q.size {
 		return true
